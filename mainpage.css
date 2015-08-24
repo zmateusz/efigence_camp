@@ -7,6 +7,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .footer {
   position: absolute;
@@ -36,4 +37,12 @@ body > .container {
 
 code {
   font-size: 80%;
+}
+
+.navbar {
+  background-image: url("img/bg-navigation-bar.png");
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+  color: white;
 }
