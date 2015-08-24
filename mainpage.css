@@ -43,6 +43,27 @@ code {
   background-image: url("img/bg-navigation-bar.png");
 }
 .navbar-default .navbar-brand,
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a,
+.jumbotron {
   color: white;
+}
+
+.navbar-nav {
+  font-weight: lighter;
+  padding-left: 25%;
+}
+
+.jumbotron {
+  background-image: url("img/morskie-oko-panorama-duza.png");
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  padding-top: 15%;
+}
+.jumbotron-video {
+  background-color: rgba(255,255,255,0.25);
+}
+.icon-play2 {
+  color: rgba(48,97,102,0.8);
 }
