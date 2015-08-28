@@ -1,3 +1,8 @@
+@blue-top: #276187;
+@lightblue: #75b8e5;
+@blue-search: #084b78;
+@yellow-border: #f9d100;
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -38,22 +43,74 @@ body > .container {
   padding-left: 15px;
 }
 
-code {
-  font-size: 80%;
+body > p {
+  margin-bottom: 0;
+  padding: 12px 0 12px 0;
+  background-color: @blue-top;
+}
+body > p > a {
+  margin: 0 10px 0 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: white;
+}
+body > p > a:hover,
+body > p > a:focus {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  border-color: @lightblue;
+  border-width: 1px 0 1px 0;
   background-image: url("../img/bg-navigation-bar.png");
+  background-repeat: no-repeat;
 }
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav>li>a,
-.jumbotron {
+
+.navbar-brand > span {
+  margin-right: 5px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
   color: white;
 }
 
-.navbar-nav {
+@media (min-width: 1200px) {
+  .navbar-nav {
+    padding-left: 20%;
+  }  
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+  font-size: 20px;
   font-weight: lighter;
-  padding-left: 25%;
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+  border-bottom: 3px solid transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+  border-bottom: 3px solid @yellow-border;
+  color: white;
+}
+
+.navbar-form .form-control {
+  border-radius: 0;
+  border: 1px solid @lightblue;
+  background-color: @blue-search;
+}
+
+@media only screen and (max-width: 766px) {
+  .collapsing, .in {
+    background-color: @blue-top;
+  }
 }
 
 .jumbotron {
@@ -62,7 +119,8 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   height: 800px;
-  padding-top: 15%;
+  padding-top: 200px;
+  color: white;
 }
 .jumbotron-video {
   background-color: rgba(255,255,255,0.25);
