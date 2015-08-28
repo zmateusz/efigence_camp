@@ -21,26 +21,34 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #00101c;
-  padding-top: 23px;
-}
-.footer ul li {
-  display: inline;
+  color: white;
 }
 
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-body > .container {
-  padding: 60px 15px 0;
-}
-.container .text-muted {
+.footer .text-muted {
   margin: 20px 0;
+  display: inline;
+  float: left;
+  color: white;
+}
+.footer .text-right {
+  float: right;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: @yellow-border;
+}
+.footer .text-right a {
+  color: white;
+  text-decoration: none;
 }
 
 .footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  background-color: #00101c;
 }
 
 body > p {
