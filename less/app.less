@@ -38,7 +38,8 @@ body {
   float: right;
 }
 
-.footer a {
+.footer a,
+#testimonials a {
   text-decoration: underline;
   color: @yellow-border;
 }
@@ -140,5 +141,16 @@ body > p > a:focus {
 
 #about p {
   text-indent: 20px;
+}
+
+#testimonials {
+  background: #192732;
+  color: white;
+  button, input, textarea {
+    border-radius: 0;
+  }
+  button {
+    background-color: @yellow-border;
+  }
 }
 
