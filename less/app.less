@@ -1,7 +1,9 @@
 @blue-top: #276187;
-@lightblue: #75b8e5;
+@blue-light: #75b8e5;
 @blue-search: #084b78;
 @yellow-border: #f9d100;
+@dark-contact: #192732;
+@dark: #00101c;
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -20,14 +22,11 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #00101c;
+  background-color: @dark;
   color: white;
 }
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
+// FOOTER CONTENT
 .footer .text-muted {
   margin: 20px 0;
   display: inline;
@@ -37,9 +36,7 @@ body {
 .footer .text-right {
   float: right;
 }
-
-.footer a,
-#contact a {
+.footer a {
   text-decoration: underline;
   color: @yellow-border;
 }
@@ -47,11 +44,11 @@ body {
   color: white;
   text-decoration: none;
 }
-
-.footer > .container {
-  background-color: #00101c;
+.footer > .container-fluid {
+  background-color: @dark;
 }
 
+// LOGIN/SOCIAL LINKS
 body > p {
   margin-bottom: 0;
   padding: 12px 0 12px 0;
@@ -69,19 +66,18 @@ body > p > a:focus {
   text-decoration: none;
 }
 
+// NAVIGATION BAR
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  border-color: @lightblue;
+  border-color: @blue-light;
   border-width: 1px 0 1px 0;
   background-image: url("../img/bg-navigation-bar.png");
   background-repeat: no-repeat;
 }
-
 .navbar-brand > span {
   margin-right: 5px;
 }
-
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: white;
@@ -99,21 +95,18 @@ body > p > a:focus {
   font-weight: lighter;
   color: white;
 }
-
 .navbar-default .navbar-nav>li>a {
   border-bottom: 3px solid transparent;
 }
-
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>.active {
   border-bottom: 3px solid @yellow-border;
   color: white;
 }
-
 .navbar-form .form-control {
   border-radius: 0;
-  border: 1px solid @lightblue;
+  border: 1px solid @blue-light;
   background-color: @blue-search;
 }
 
@@ -121,80 +114,4 @@ body > p > a:focus {
   .collapsing, .in {
     background-color: @blue-top;
   }
-}
-
-.jumbotron {
-  margin-bottom: 0;
-  background-image: url("../img/morskie-oko-panorama-duza.jpg");
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 800px;
-  padding-top: 200px;
-  color: white;
-}
-.jumbotron-video {
-  background-color: rgba(255,255,255,0.25);
-}
-.icon-play2 {
-  color: rgba(48,97,102,0.8);
-}
-
-#about p {
-  text-indent: 20px;
-}
-
-#contact {
-  background: #192732;
-  color: white;
-  button, input, textarea {
-    border-radius: 0;
-  }
-  button {
-    background-color: @yellow-border;
-  }
-}
-
-#slider {
-  background-color: @lightblue;
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  height: 400px;
-  margin-bottom: 0;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-  text-align: left;
-}
-.carousel-caption div {
-  background-color: #00101c;
-  padding: 10px;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 350px;
-  background-color: transparent;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-/* Bump up size of carousel content */
-.carousel-caption p {
-  margin-bottom: 20px;
-  // font-size: 21px;
-  // line-height: 1.4;
-}
-.carousel-control.left, .carousel-control.right {
-    background-image: none
 }
