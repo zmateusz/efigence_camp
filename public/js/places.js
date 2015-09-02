@@ -1,10 +1,11 @@
 $(document).ready(getPlaces);
 
-function getPlaces() {
+var apiURL = "http://camp.efigence.com/camp/api/places";
 
+function getPlaces() {
   $.ajax({
     method: "GET",
-    url: "http://camp.efigence.com/camp/api/places",
+    url: apiURL,
     // data: { page: 1 },
     statusCode: {
       200: function(data) {
@@ -23,6 +24,10 @@ function getPlaces() {
       },
       500: function() {
         alert("Błąd serwera, spróbuj ponownie.");
+      },
+      0: function() {
+        apiURL = "http://camp.efigence.com/camp/api/places/";
+        getPlaces();
       }
     }
   });
