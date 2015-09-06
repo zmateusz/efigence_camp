@@ -38,7 +38,14 @@ function newTableRow(place, tableBody) {
   clone.find(".media-place").text(place.place+", "+place.district);
   clone.find(".media-stars").html('<span class="icon-star-full">'.repeat(place.starts));
   clone.find(".media-description").text(place.description);
-  if (place.wifi) clone.find(".media-icons").append('<span class="icon-connection">');
+  var icons = clone.find(".media-icons");
+  if (place.wifi) icons.append('<span class="icon-connection">');
+  if (place.tv) icons.append('<span class=" icon-tv">');
+  if (place.food) icons.append('<span class="icon-spoon-knife">');
+  if (place.paypas) icons.append('<span class="icon-credit-card">');
+  if (place.swimming) icons.append('<span class=" icon-lifebuoy">');
+  if (place.airport) icons.append('<span class=" icon-airplane">');
+  if (place.parking) icons.append('<span><strong>P</strong></span');
   tableRow.append(clone);
   tableBody.append(tableRow);
 };

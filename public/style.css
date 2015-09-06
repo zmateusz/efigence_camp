@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?q15cfr');
-	src:url('fonts/icomoon.eot?#iefixq15cfr') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?q15cfr') format('truetype'),
-		url('fonts/icomoon.woff?q15cfr') format('woff'),
-		url('fonts/icomoon.svg?q15cfr#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?to0bnv');
+	src:url('fonts/icomoon.eot?#iefixto0bnv') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?to0bnv') format('truetype'),
+		url('fonts/icomoon.woff?to0bnv') format('woff'),
+		url('fonts/icomoon.svg?to0bnv#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -88,4 +88,13 @@
 }
 .icon-twitter3:before {
 	content: "\e615";
+}
+.icon-lifebuoy:before {
+	content: "\e616";
+}
+.icon-tv:before {
+	content: "\e617";
+}
+.icon-airplane:before {
+	content: "\e618";
 }
