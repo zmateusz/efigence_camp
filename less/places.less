@@ -1,5 +1,6 @@
 @import "app";
 @gold: #bca51d;
+@blue-pagination: #427ca2;
 
 #img-header {
   width: 100%;
@@ -68,4 +69,37 @@ tbody .media-icons {
 .media-body p a {
   color: @gold;
   text-decoration: underline;
+}
+
+#pagination {
+  height: 60px;
+  background: @blue-pagination;
+
+  .row {
+    margin-top: 20px;
+    text-align: center;
+  }
+  h4 {
+    display: inline;
+    margin-top: 0;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+#prev-page {
+  float: left;
+}
+#next-page {
+  float: right;
+}
+#page-numbers {
+  display: inline;
+  h4 {
+    padding: 3px 10px;
+  }
+  h4:first-child {
+    background-color: @gold;
+  }
 }
