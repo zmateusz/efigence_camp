@@ -28,17 +28,30 @@
   padding: 0;
 }
 
-// ABOUT CONTENT
-#about {
-  background: green;
-}
-#news {
-  background: red;
-}
-#about, #news {
+// ABOUT, NEWS CONTENT
+#info-container {
+  overflow: hidden;
+  div {
+    margin-bottom: -99px;
+    padding-bottom: 99px;
+  }
   p {
     text-indent: 20px;
   }
+  a {
+    color: @yellow-border;
+    text-decoration: underline;
+  }
+  color: white;
+
+}
+#about-container {
+  background-image: url('https://www.dropbox.com/s/m3jbatq0mysgwnt/bg_lowpoly.jpg?raw=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#news-container {
+  background: @dark;
 }
 
 #google-map {
