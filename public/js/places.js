@@ -8,6 +8,7 @@ function getPlaces(page) {
     method: "GET",
     url: apiURL,
     data: { page: page },
+    dataType: 'json',
     statusCode: {
       200: function(data) {
         var tableBody = $("table tbody");
@@ -105,5 +106,5 @@ $("#next-page").click(function() {
   if (page > 1) {
     $("#prev-page").removeClass("not-active");
   };
-  
+
 });
