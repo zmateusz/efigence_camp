@@ -82,10 +82,13 @@ tbody .media-icons {
   h4 {
     display: inline;
     margin-top: 0;
-  }
-  a {
-    text-decoration: none;
+    cursor: pointer;
     color: white;
+  }
+  .not-active {
+    pointer-events: none;
+    cursor: default;
+    color: #444;
   }
 }
 #prev-page {
@@ -99,7 +102,7 @@ tbody .media-icons {
   h4 {
     padding: 3px 10px;
   }
-  h4:first-child {
+  .active {
     background-color: @gold;
   }
 }

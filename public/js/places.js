@@ -1,12 +1,13 @@
-$(document).ready(getPlaces);
+$(document).ready(getPlaces(1));
 
 var apiURL = "http://camp.efigence.com/camp/api/places";
 
-function getPlaces() {
+function getPlaces(page) {
+  // if (typeof(page)==='undefined') page = 1;
   $.ajax({
     method: "GET",
     url: apiURL,
-    // data: { page: 1 },
+    data: { page: page },
     statusCode: {
       200: function(data) {
         var tableBody = $("table tbody");
@@ -52,3 +53,13 @@ function newTableRow(place, tableBody) {
   tableRow.append(clone);
   tableBody.append(tableRow);
 };
+
+$("#page-numbers h4").click(function() {
+
+  $("#page-numbers h4").removeClass("active");
+  $(this).addClass("active");
+  var page = $(this).text();
+  $('tbody tr').slice(1).remove();
+  getPlaces(page);
+  
+});
