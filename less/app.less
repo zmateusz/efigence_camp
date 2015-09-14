@@ -63,7 +63,6 @@ body > p > a {
 body > p > a:hover,
 body > p > a:focus {
   color: white;
-  text-decoration: none;
 }
 
 // NAVIGATION BAR
@@ -97,6 +96,7 @@ body > p > a:focus {
 }
 .navbar-default .navbar-nav>li>a {
   border-bottom: 3px solid transparent;
+  transition: border-color 0.45s;
 }
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus,
@@ -114,4 +114,20 @@ body > p > a:focus {
   .collapsing, .in {
     background-color: @blue-top;
   }
+}
+
+// ANIMATIONS
+.navbar-brand span {
+  display:inline-block;
+}
+.navbar-brand:hover {
+   span {
+    transform-origin: bottom center;
+    animation: brandicon 0.35s 2 alternate;
+  }
+}
+@keyframes brandicon {
+  0% {transform: rotate(0deg) scale(1);}
+  50% {transform: rotate(25deg) scale(1.5);}
+  100% {transform: rotate(-25deg) scale(1.5);}
 }
