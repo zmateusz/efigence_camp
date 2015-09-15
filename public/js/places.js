@@ -1,9 +1,11 @@
-$(document).ready(getPlaces(1));
+$(document).ready(function() {
+  getPlaces(1);
+});
 
 var apiURL = "http://camp.efigence.com/camp/api/places";
 
 function getPlaces(page) {
-  // if (typeof(page)==='undefined') page = 1;
+
   $.ajax({
     method: "GET",
     url: apiURL,
@@ -80,15 +82,13 @@ $("#prev-page").click(function() {
   $("#page-numbers h4").removeClass("active");
   $("#page-numbers h4:nth-of-type("+page+")").addClass("active");
   $('tbody tr').slice(1).remove();
-  getPlaces(page);
   if (page == 1) {
     $("#prev-page").addClass("not-active");
-  } else {
-    $("#prev-page").removeClass("not-active");
   };
-  if (page < 4) {
+  if (page == 3) {
     $("#next-page").removeClass("not-active");
   };
+  getPlaces(page);
 
 });
 $("#next-page").click(function() {
@@ -97,14 +97,12 @@ $("#next-page").click(function() {
   $("#page-numbers h4").removeClass("active");
   $("#page-numbers h4:nth-of-type("+page+")").addClass("active");
   $('tbody tr').slice(1).remove();
-  getPlaces(page);
   if (page == 4) {
     $("#next-page").addClass("not-active");
-  } else {
-    $("#next-page").removeClass("not-active");
   };
-  if (page > 1) {
+  if (page == 2) {
     $("#prev-page").removeClass("not-active");
   };
+  getPlaces(page);
 
 });
